@@ -7,7 +7,7 @@
 <h1>Shop categories</h1>  
  
 {%  for category in categories %}
-      
+       
     <h2>{{category.title}}</h2>
     <p class="select_category"><a href="{{ url('category_view') }}/{{category.id}}">Select category</a></p>
     <hr>
