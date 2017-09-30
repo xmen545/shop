@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Vacancies list IT WORKS</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Salary</th>
+                <th>Isremote</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for vacancy in vacancies %}
+            <tr>
+                <td><a href="{{ path('vacancy_show', { 'id': vacancy.id }) }}">{{ vacancy.id }}</a></td>
+                <td>{{ vacancy.title }}</td>
+                <td>{{ vacancy.description }}</td>
+                <td>{{ vacancy.salary }}</td>
+                <td>{% if vacancy.isRemote %}Yes{% else %}No{% endif %}</td>
+                <td>{{ vacancy.category }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('vacancy_show', { 'id': vacancy.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('vacancy_edit', { 'id': vacancy.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('vacancy_new') }}">Create a new vacancy</a>
+        </li>
+    </ul>
+{% endblock %}

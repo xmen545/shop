@@ -1,0 +1,25 @@
+AppBundle\Entity\Vacancy:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\VacancyRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        description:
+            type: text
+        salary:
+            type: integer
+        isRemote:
+            type: boolean
+            column: is_remote
+        category:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

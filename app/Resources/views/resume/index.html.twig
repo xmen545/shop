@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Resumes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for resume in resumes %}
+            <tr>
+                <td><a href="{{ path('resume_show', { 'id': resume.id }) }}">{{ resume.id }}</a></td>
+                <td>{{ resume.title }}</td>
+                <td>{{ resume.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('resume_show', { 'id': resume.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('resume_edit', { 'id': resume.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('resume_new') }}">Create a new resume</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,28 @@
+body{    font-family: verdana;}
+h1{text-transform: uppercase;}
+      
+#content{text-align:center;}
+#content img{width:100%; max-width:300px;}  
+    
+.price{color:green; font-size:18pt; font-weight:bold;}   
+.rating span{color:orange; font-size:18pt; font-weight:bold;}  
+
+.buy{    margin-top: 40px;}
+.buy a, .more a,  .select_category a{    background: #468000;
+    color: #fff; 
+    text-decoration: none;
+    padding: 14px 134px;
+    text-transform: uppercase;        
+    font-weight: bold;
+}
+.back, .more,  .select_category {    margin-top: 40px;  margin-bottom: 40px;}
+.more a, .select_category a{padding: 14px 126px;}
+.back a{background: #797979;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 128px; 
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.review_fio{font-weight: bold;    font-size: 12pt;}
+.review_date{    font-size: 10pt;    line-height: 0px;    margin-bottom: 30px;}

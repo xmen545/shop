@@ -1,0 +1,22 @@
+
+ 
+{% extends "/shop/layout.html.twig" %}     
+{% block titles %}{{category.title}}{% endblock %}
+ 
+{% block body %} 
+ 
+<h1>{{category.title}}</h1> 
+
+{%  for product in products %}
+    
+    <h2>{{product.title}}</h2>
+    <img src="{{product.img}}" alt="{{product.title}}" /><br/>
+    <p class="price">{{product.price}}</p>
+    <p class="more"><a href="{{ url('categories_view') }}/{{product.categoryId}}/{{product.id}}">More</a></p>
+    <hr>
+
+{% endfor %}
+
+<p class="back"><a href="{{ url('categories_view') }}">Back</a></p>
+
+{% endblock %}       

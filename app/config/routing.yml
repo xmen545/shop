@@ -1,0 +1,45 @@
+categories_view_main:
+    path: /    
+    defaults: {_controller: "AppBundle:Shop:categories" }
+categories_view:
+    path: /categories      
+    defaults: {_controller: "AppBundle:Shop:categories" }
+       
+category_view:
+    path: /categories/{category}
+    defaults: {_controller: "AppBundle:Shop:products" , category : 0 }
+
+product_view:  
+
+product_view:     
+ 
+    path: /categories/{category}/{product}
+    defaults: {_controller: "AppBundle:Shop:product", category : 0,  product : 0  }
+
+
+ 
+
+ 
+
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+some:
+    path:     /some/{page}
+    defaults: { _controller: "AppBundle:Default:some" }
+    
+resume:
+    resource: '@AppBundle/Resources/config/routing/resume.yml'
+    prefix: resume
+    
+    
+welcome_page:
+    path: /welcome
+    defaults: {_controller: "AppBundle:Lesson:welcome" }
+view_page:
+    path: /view/{id}
+    defaults: {_controller: "AppBundle:Lesson:view" }
+        
+    
