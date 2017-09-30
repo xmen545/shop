@@ -8,7 +8,7 @@ categories_view:
 category_view:
     path: /categories/{category}
     defaults: {_controller: "AppBundle:Shop:products" , category : 0 }
-
+ 
 product_view:       
     path: /categories/{category}/{product}
     defaults: {_controller: "AppBundle:Shop:product", category : 0,  product : 0  }
