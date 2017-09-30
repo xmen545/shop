@@ -79,7 +79,7 @@ class ShopController extends Controller
     }
     public function productsGet(){
         return     $products= [
-            [ 'id' => 1, 
+            [ 'id' => 1,  
                'categoryId' => 1,
                'rating' => 4,
                 'title' => 'iPhone 7',
