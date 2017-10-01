@@ -8,21 +8,12 @@
     {% if product.rating > 0 %}
          <p class="rating">  
             Rating ({{product.rating}}/5): 
-            {% if product.rating == 1 %}      
-                <span>&#9829;</span>
-            {% endif %}
-            {% if product.rating == 2 %}
-                 <span>&#9829; &#9829;</span>
-            {% endif %}
-            {% if product.rating == 3 %}
-                 <span>&#9829; &#9829; &#9829;</span>
-            {% endif %}
-            {% if product.rating == 4 %}
-                 <span>&#9829; &#9829; &#9829; &#9829;</span>
-            {% endif %}
-            {% if product.rating == 5 %}
-                 <span>&#9829; &#9829; &#9829; &#9829; &#9829;</span>
-            {% endif %}
+                <span  {% if product.rating >= 1 %}class = "active"  {% endif %}>*</span>
+                <span  {% if product.rating >= 2 %}class = "active"  {% endif %}>*</span>
+                <span  {% if product.rating >= 3 %}class = "active"  {% endif %}>*</span>
+                <span  {% if product.rating >= 4 %}class = "active"  {% endif %}>*</span>
+                <span  {% if product.rating == 5 %}class = "active"  {% endif %}>*</span>
+          
          </p>
           <p>{{product.desc}}</p>     
     {% endif %}

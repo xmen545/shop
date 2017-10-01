@@ -5,7 +5,8 @@ h1{text-transform: uppercase;}
 #content img{width:100%; max-width:300px;}  
     
 .price{color:green; font-size:18pt; font-weight:bold;}   
-.rating span{color:orange; font-size:18pt; font-weight:bold;}  
+.rating span{color:grey; font-size:18pt; font-weight:bold;}  
+.rating span.active{color:green;}  
 
 .buy{    margin-top: 40px;}
 .buy a, .more a,  .select_category a{    background: #468000;
